@@ -1,0 +1,367 @@
+.popup {
+  width: 52.083vw;
+  height: 45.694vw;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  box-shadow: 0 0 0.694vw rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup.show {
+  display: block;
+}
+
+.popup-content {
+  margin: 0 auto;
+  padding: 0px 2.778vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promotion {
+  position: absolute;
+  top: 0;
+  left: 2.917vw;
+  color: white;
+  background: rgb(1, 185, 197);
+  padding: 0.278vw 0.694vw 0.417vw;
+}
+
+.close {
+  width: 1.667vw;
+  height: 1.667vw;
+  position: absolute;
+  top: 0.694vw;
+  right: 1.042vw;
+  font-size: 1.389vw;
+  color: rgb(206, 209, 216);
+  cursor: pointer;
+}
+
+.title {
+  font-size: 2.083vw;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: uppercase;
+  margin: 4.236vw 0px 2.083vw;
+}
+
+.text {
+  font-size: 1.667vw;
+  font-weight: 500;
+  margin: 0;
+}
+
+span.lastChance {
+  color: rgb(1, 185, 197);
+}
+
+.sale {
+  font-size: 1.667vw;
+  font-weight: 700;
+  line-height: 130%;
+  margin: 0;
+  padding: 1.111vw 2.083vw;
+  border: 1px solid rgb(1, 185, 197);
+  margin: 0.556vw 0px 0px;
+  border-radius: 2.083vw;
+}
+
+.gift {
+  font-size: 1.667vw;
+  font-weight: 400;
+  align-self: start;
+  margin: 2.778vw 0px 1.389vw;
+}
+
+.promoCards {
+  display: grid;
+  grid-template-columns: repeat(3, 14.583vw);
+  grid-row: 1;
+  grid-gap: 1.389vw;
+}
+
+.promoCards__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 13.681vw;
+  border: 2px solid rgb(231, 234, 241);
+  border-radius: 1.389vw;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1.528vw 1.528vw;
+  cursor: pointer;
+}
+
+#radio {
+  width: 1.528vw;
+  height: 1.528vw;
+  position: absolute;
+  right: 1.528vw;
+  top: 1.875vw;
+}
+
+.radio__period {
+  font-size: 1.806vw;
+  font-weight: 400;
+  line-height: 100%;
+  color: #2d3242;
+  text-align: left;
+  margin-bottom: 0.833vw;
+}
+
+.radio__oldPrice {
+  margin: 0 0 1.111vw;
+  text-align: left;
+  color: rgb(82, 87, 105);
+  font-size: 1.389vw;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+del {
+  position: relative;
+  text-decoration: none;
+}
+del:before {
+  content: '';
+  border-bottom: 2px solid rgb(253, 77, 53);
+  position: absolute;
+  width: 33%;
+  height: 50%;
+  transform: rotate(-18deg);
+  left: 0;
+}
+
+del:after {
+  content: '';
+  border-bottom: 2px solid rgb(253, 77, 53);
+  position: absolute;
+  width: 33%;
+  height: 50%;
+  transform: rotate(18deg);
+  left: 0;
+}
+
+.radio__newPrice {
+  display: flex;
+  align-items: end;
+  height: 5.208vw;
+  margin: 0;
+  text-align: left;
+  color: rgb(45, 50, 66);
+  font-size: 2.917vw;
+  font-weight: 700;
+  line-height: 110%;
+  border-top: 1px solid rgb(210, 212, 217);
+}
+
+.radio__image {
+  width: 3.472vw;
+  height: 3.472vw;
+  position: absolute;
+  bottom: 2.431vw;
+  right: 1.597vw;
+}
+
+.radio__image_sale {
+  right: 0.347vw;
+}
+
+.popup-button {
+  padding: 1.389vw 2.917vw;
+  margin: 2.778vw 0;
+  outline: 1px solid red;
+  border-radius: 2.083vw;
+  text-decoration: none;
+  color: white;
+  background: rgb(253, 77, 53);
+  font-size: 1.389vw;
+  font-weight: 500;
+  line-height: 1.389vw;
+  opacity: 1;
+}
+
+.popup-button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 700px) {
+  .popup {
+    max-width: 700px;
+    width: 90%;
+  }
+  .popup.show {
+    height: auto;
+  }
+  .popup-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .promotion {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    color: white;
+    background: rgb(1, 185, 197);
+    padding: 4px 10px 6px;
+  }
+
+  .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: rgb(206, 209, 216);
+    cursor: pointer;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 50px 0px 22px;
+  }
+
+  .text {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  span.lastChance {
+    color: rgb(1, 185, 197);
+  }
+
+  .sale {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 130%;
+    margin: 0;
+    padding: 12px 20px;
+    border: 1px solid rgb(1, 185, 197);
+    margin: 8px 0px 26px;
+    border-radius: 20px;
+  }
+
+  .gift {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 14px;
+    align-self: center;
+  }
+
+  .promoCards {
+    display: grid;
+    grid-template-columns: 295px;
+    grid-row: 3;
+    grid-gap: 6px;
+  }
+
+  .promoCards__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 133px;
+    gap: 12px;
+    border: 2px solid rgb(231, 234, 241);
+    border-radius: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 24px 20px;
+    cursor: pointer;
+  }
+
+  #radio {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 24px;
+  }
+
+  .radio__period {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #2d3242;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .radio__oldPrice {
+    position: absolute;
+    top: 84px;
+    right: 20px;
+    margin: 0;
+    text-align: left;
+    color: rgb(82, 87, 105);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 110%;
+  }
+  del:before {
+    width: 100%;
+    height: 50%;
+    transform: rotate(-18deg);
+    left: 0;
+  }
+
+  del:after {
+    content: '';
+    border-bottom: 2px solid rgb(253, 77, 53);
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    transform: rotate(18deg);
+    left: 0;
+  }
+
+  .radio__newPrice {
+    position: relative;
+    display: flex;
+    align-items: end;
+    height: 55px;
+    margin: 0;
+    text-align: center;
+    color: rgb(45, 50, 66);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 110%;
+    border-top: none;
+  }
+
+  .radio__image {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 60px;
+    right: 120px;
+  }
+
+  .radio__image_sale {
+    right: 97px;
+  }
+
+  .popup-button {
+    padding: 20px 34px;
+    margin: 20px 0;
+    outline: 1px solid red;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 10px;
+    opacity: 1;
+  }
+}
