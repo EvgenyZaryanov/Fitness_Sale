@@ -1,10 +1,23 @@
-# React + Vite
+# Fitness Sale
 
 **[ссылка на проект](https://fitness-sale.netlify.app/)**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Макет по ссылке в Figma - 
+(https://www.figma.com/file/9XgWK3p8hV7kGaeNbVqnpm/%D0%B4%D0%BB%D1
+%8F-%D0%B2%D0%B5%D1%80%D1%81%D1%82%D0%BA%D0%B8?type=desig
+n&node-id=0%3A1&mode=design&t=h09Rzn4ocBcWUV0t-1).
+- Сверстаны все элементы первого экрана с тарифами (отображено выделение
+тарифов при выборе, на кнопку "купить" наложен анимационный эффект
+мигания (кнопка без перехода с заглушкой), отображен таймер на закрепленном хедере -
+поставить 2 минуты, при остатке в 30 сек таймер мигает и выделяется красным).
+- Тарифы полученные от сервиса разложены на страницу с тарифами на первом
+экране.
+- Когда таймер заканчивается скидочные цены пропадают и остаются цены без
+скидки. После этого появляется попап, где отображены ещё большие скидки, также
+полученные от сервиса. 
+- При закрытии попапа пользователь остается на первом экране, где отображаются тарифы без
+скидок. 
+- В проекте используется адаптивная/резиновая верстка (нужные экраны в Figma).
+  
+Ссылка на получение данных от сервиса:
+https://t-pay.iqfit.app/subscribe/list-test
